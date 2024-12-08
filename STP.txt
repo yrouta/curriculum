@@ -1,0 +1,22 @@
+問1：switch3
+
+問2：switch3はE0/1とE0/2共にDP
+　　理由はswitch3がルートブリッジだったから
+
+　　次に各RPを調べるためにパスコストを調べました。
+
+　　switch1:switch2→switch4→switch3=219
+　　　　　　switch3＝100
+
+　　　　　　switch1のRPはF0/2 また指定ポートのルールによりF0/1はDP
+
+
+　　switch4:switch2→switch1→switch3=219
+            switch3=100
+
+            switch4のRPはE0/2 また指定ポートのルールによりE0/1はDP
+
+    switch2:switch1→switch3=119
+            switch4→switch3=200
+
+            switch2のRPはF0/1 また何も役割のないポートとなるためF0/1はBP
